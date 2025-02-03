@@ -22,7 +22,7 @@ services:
     volumes:
       - //var/run/docker.sock:/var/run/docker.sock
       - ./deploy.yml:/root/deploy.yml
-    restart: always
+    command: tail -f /dev/null    
 
 networks:
   jnet:
